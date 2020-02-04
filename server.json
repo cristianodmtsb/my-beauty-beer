@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "Apresentação Cliente XPTO",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vel incidunt asperiores possimus! Est in accusantium nobis, itaque impedit molestias eius ut dolorem cumque veniam. Accusantium animi harum tempora consectetur. </p><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea amet inventore corporis quae sed quisquam laborum dignissimos illum nam, quis consequuntur tempora officia sint quo ad, quasi fuga nostrum!</blockquote>",
+      "category": "Reunião",
+      "documents": []
+    },
+    {
+      "id": 1,
+      "title": "Apresentação Cliente Monkeypress",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vel incidunt asperiores possimus! Est in accusantium nobis, itaque impedit molestias eius ut dolorem cumque veniam. Accusantium animi harum tempora consectetur. </p><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea amet inventore corporis quae sed quisquam laborum dignissimos illum nam, quis consequuntur tempora officia sint quo ad, quasi fuga nostrum!</blockquote>",
+      "category": "Documento",
+      "documents": [{ "document_url": "http://googledocs.com/doc.docx" }]
+    },
+    {
+      "id": 2,
+      "title": "Apresentação Preview",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vel incidunt asperiores possimus! Est in accusantium nobis, itaque impedit molestias eius ut dolorem cumque veniam. Accusantium animi harum tempora consectetur. </p><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea amet inventore corporis quae sed quisquam laborum dignissimos illum nam, quis consequuntur tempora officia sint quo ad, quasi fuga nostrum!</blockquote>",
+      "category": "Página",
+      "documents": []
+    }
+  ],
+
+  "profile": { "name": "Cristiano Castro" }
+}
