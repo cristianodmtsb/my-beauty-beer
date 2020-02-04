@@ -1,4 +1,4 @@
-## MONKEY CMS
+## My Beauty Beer
 
 Neste projeto de teste, foram usadas varias técnicas de:
 
