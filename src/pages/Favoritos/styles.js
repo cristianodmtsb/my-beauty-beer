@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const BeerTable = styled.table`
   width: 70%;
-  margin: 0 auto;
+  margin: 3rem auto;
   background: #fff;
+  border-radius: 4px;
+
   thead th {
     color: #999;
     text-align: left;

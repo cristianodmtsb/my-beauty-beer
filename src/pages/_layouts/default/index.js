@@ -2,11 +2,15 @@ import React from "react";
 
 import Header from "../../../component/Header";
 
+import { Container } from "./styles";
+
 function DefaultLayout({ children }) {
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <Container>
+        <div>{children}</div>
+      </Container>
     </>
   );
 }

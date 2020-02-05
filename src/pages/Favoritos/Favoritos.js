@@ -1,9 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import { MdDelete } from "react-icons/md";
+import * as FavoriteActions from "../../store/modules/Favorite/actions";
 
 import { BeerTable } from "./styles";
 
-export default function Favoritos() {
+function Favoritos({ favorite, removeFavorite }) {
   return (
     <BeerTable>
       <thead>
@@ -14,20 +17,31 @@ export default function Favoritos() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <img src="https://images.punkapi.com/v2/2.png" alt="" />
-          </td>
-          <td>
-            <strong>Trashy Blonde</strong>
-          </td>
-          <td>
-            <button type="button">
-              <MdDelete size={20} color="#7159c1" />
-            </button>
-          </td>
-        </tr>
+        {favorite.map(beer => (
+          <tr key={beer.id}>
+            <td>
+              <img src={beer.image_url} alt="" />
+            </td>
+            <td>
+              <strong>{beer.name}</strong>
+            </td>
+            <td>
+              <button type="button" onClick={() => removeFavorite(beer.id)}>
+                <MdDelete size={20} color="#7159c1" />
+              </button>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </BeerTable>
   );
 }
+
+const mapStateToProps = state => ({
+  favorite: state.favorite
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(FavoriteActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favoritos);
