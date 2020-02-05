@@ -6,6 +6,7 @@ export const BeerList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   list-style: square none;
+  padding: 3em 15px;
 
   li {
     display: flex;
@@ -40,7 +41,8 @@ export const BeerList = styled.ul`
       display: flex;
       align-items: center;
       transition: background-color 0.2s;
-      svg {
+      div {
+        color: #fff;
         padding: 12px;
         background: rgba(0, 0, 0, 0.2);
       }
