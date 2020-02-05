@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.header`
-  background-color: #fff;
+  background-color: #333;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   display: flex;
   justify-content: space-between;
