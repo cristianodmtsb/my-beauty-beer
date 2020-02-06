@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "../../store";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { useDispatch, useSelector } from "react-redux";
 import { MdDelete } from "react-icons/md";
 import * as FavoriteActions from "../../store/modules/Favorite/actions";
 
 import { BeerTable } from "./styles";
 
-function Favoritos({ favorite, removeFavorite }) {
+export default function Favoritos() {
+  const favorite = useSelector(state => state.favorite);
+  const dispatch = useDispatch();
+
   return (
     <PersistGate persistor={persistor}>
       <BeerTable>
@@ -48,7 +50,12 @@ function Favoritos({ favorite, removeFavorite }) {
                 </span>
               </td>
               <td>
-                <button type="button" onClick={() => removeFavorite(beer.id)}>
+                <button
+                  type="button"
+                  onClick={() =>
+                    dispatch(FavoriteActions.removeFavorite(beer.id))
+                  }
+                >
                   <MdDelete size={20} color="#b67f0b" />
                 </button>
               </td>
@@ -59,12 +66,3 @@ function Favoritos({ favorite, removeFavorite }) {
     </PersistGate>
   );
 }
-
-const mapStateToProps = state => ({
-  favorite: state.favorite
-});
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(FavoriteActions, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Favoritos);
