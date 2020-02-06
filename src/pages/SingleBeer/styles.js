@@ -44,7 +44,7 @@ export const Beer = styled.div`
         margin-left: 35px;
       }
       button {
-        background-color: #7159c1;
+        background-color: #b67f0b;
         color: #fff;
         border: 0;
         border-radius: 4px;
@@ -67,7 +67,7 @@ export const Beer = styled.div`
           padding: 10px 0 0 0;
         }
         &:hover {
-          background-color: ${darken(0.05, "#7159c1")};
+          background-color: ${darken(0.05, "#b67f0b")};
         }
       }
     }

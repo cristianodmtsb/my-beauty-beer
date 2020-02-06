@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BeerTable = styled.table`
   width: 70%;
-  margin: 3rem auto;
+  margin: 95px auto 3rem auto;
   background: #fff;
   border-radius: 4px;
 
@@ -14,6 +14,13 @@ export const BeerTable = styled.table`
   tbody td {
     padding: 12px;
     border-bottom: 1px solid #eee;
+    > h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    > span {
+      display: flex;
+    }
   }
   img {
     height: 100px;

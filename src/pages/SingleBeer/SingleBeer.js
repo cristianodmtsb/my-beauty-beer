@@ -53,10 +53,6 @@ class SingleBeer extends Component {
                 {singleBeer.abv}
               </li>
               <li>
-                <strong>ABV: </strong>
-                {singleBeer.abv}%
-              </li>
-              <li>
                 <strong>IBU: </strong>
                 {singleBeer.ibu}%
               </li>

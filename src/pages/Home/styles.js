@@ -28,31 +28,44 @@ export const BeerList = styled.ul`
     }
     > span {
       font-size: 15px;
-      margin: 5px 0;
+      margin: 5px 0 15px;
     }
-
-    button {
-      background-color: #7159c1;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
+    .beerActions {
+      display: flex;
       margin-top: auto;
 
-      display: flex;
-      align-items: center;
-      transition: background-color 0.2s;
-      div {
+      button,
+      a {
+        background-color: #b67f0b;
         color: #fff;
-        padding: 12px;
-        background: rgba(0, 0, 0, 0.2);
+        border: 0;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s;
+        div {
+          color: #fff;
+          padding: 12px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+        span {
+          flex: 1;
+          text-align: center;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: ${darken(0.05, "#b67f0b")};
+        }
       }
-      span {
+      a {
+        background-color: #190101;
         flex: 1;
-        text-align: center;
-        font-weight: bold;
-      }
-      &:hover {
-        background-color: ${darken(0.05, "#7159c1")};
+        margin-right: 5px;
+        text-decoration: none;
+        &:hover {
+          background-color: ${darken(0.05, "#190101")};
+        }
       }
     }
   }

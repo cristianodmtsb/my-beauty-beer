@@ -14,9 +14,10 @@ function Favoritos({ favorite, removeFavorite }) {
       <BeerTable>
         <thead>
           <tr>
-            <th />
-            <th>Cerveja</th>
-            <th />
+            <th>#</th>
+            <th>Beers</th>
+            <th>Specs</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -26,11 +27,29 @@ function Favoritos({ favorite, removeFavorite }) {
                 <img src={beer.image_url} alt="" />
               </td>
               <td>
-                <strong>{beer.name}</strong>
+                <h4>{beer.name}</h4>
+              </td>
+              <td>
+                <span>
+                  <strong>ABV: </strong>
+                  {beer.abv}
+                </span>
+                <span>
+                  <strong>IBU: </strong>
+                  {beer.ibu}%
+                </span>
+                <span>
+                  <strong>SRM: </strong>
+                  {beer.srm}%
+                </span>
+                <span>
+                  <strong>PH: </strong>
+                  {beer.ph}%
+                </span>
               </td>
               <td>
                 <button type="button" onClick={() => removeFavorite(beer.id)}>
-                  <MdDelete size={20} color="#7159c1" />
+                  <MdDelete size={20} color="#b67f0b" />
                 </button>
               </td>
             </tr>

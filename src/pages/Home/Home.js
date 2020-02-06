@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
+import { MdFavoriteBorder, MdFavorite, MdLink } from "react-icons/md";
 
 import * as FavoriteActions from "../../store/modules/Favorite/actions";
 import { BeerList } from "./styles";
@@ -40,23 +40,27 @@ class Home extends Component {
           <li key={beer.id}>
             <img src={beer.image_url} alt={beer.name} />
             <strong>{beer.name}</strong>
-            <span>First Brewd: {beer.first_brewed}</span>
-            <span>{beer.tagline}</span>
+            <span>
+              First Brewd: {beer.first_brewed} <br /> {beer.tagline}
+            </span>
             <div className="beerActions">
-              <Link to={`/beer/${beer.id}`}>Ver Detalhes</Link>
+              <Link to={`/beer/${beer.id}`}>
+                <div>
+                  <MdLink size={18} />
+                </div>
+                <span>Details</span>
+              </Link>
               {favoriteCheck[beer.id] === beer.id ? (
                 <button onClick={() => this.handleDisfavor(beer.id)}>
                   <div>
-                    <MdFavorite size={18} />
+                    <MdFavorite size={18} color="#630404" />
                   </div>
-                  <span>Desfavoritar</span>
                 </button>
               ) : (
                 <button onClick={() => this.handleFavor(beer.id)}>
                   <div>
                     <MdFavoriteBorder size={18} />
                   </div>
-                  <span>Favoritar</span>
                 </button>
               )}
             </div>
