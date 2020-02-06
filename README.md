@@ -17,7 +17,7 @@ PUNK API
 
 Para instalar use:
 
-`yarn stall`
+`yarn install`
 
 Ou
 
