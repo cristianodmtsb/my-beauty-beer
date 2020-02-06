@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
 
-import posts from "./posts/sagas";
+import favorite from "./Favorite/sagas";
 
 export default function* rootSaga() {
-  return yield all([posts]);
+  return yield all([favorite]);
 }

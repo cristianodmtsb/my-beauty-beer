@@ -6,7 +6,7 @@ export function listPostRequest() {
 export function listPostSuccess(posts) {
   return {
     type: "@posts/SUCCESS",
-    posts
+    ...posts
   };
 }
 

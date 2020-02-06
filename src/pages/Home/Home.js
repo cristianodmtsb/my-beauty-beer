@@ -18,16 +18,16 @@ class Home extends Component {
     this.setState({ beers: response.data });
   }
 
-  handleFavor = beer => {
-    const { addFavorite } = this.props;
+  handleFavor = id => {
+    const { addFavoriteRequest } = this.props;
 
-    this.setState(addFavorite(beer));
+    addFavoriteRequest(id);
   };
 
-  handleDisfavor = beer => {
+  handleDisfavor = id => {
     const { removeFavorite } = this.props;
 
-    this.setState(removeFavorite(beer));
+    removeFavorite(id);
   };
 
   render() {
@@ -50,7 +50,7 @@ class Home extends Component {
                 <span>Desfavoritar</span>
               </button>
             ) : (
-              <button onClick={() => this.handleFavor(beer)}>
+              <button onClick={() => this.handleFavor(beer.id)}>
                 <div>
                   <MdFavoriteBorder size={18} />
                 </div>

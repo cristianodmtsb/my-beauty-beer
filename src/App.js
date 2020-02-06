@@ -8,7 +8,7 @@ import "./config/ReactotronConfig";
 
 import history from "./services/history";
 import Routes from "./routes";
-import store from "./store";
+import { store } from "./store";
 
 function App() {
   return (

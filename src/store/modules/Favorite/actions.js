@@ -1,6 +1,12 @@
-export function addFavorite(beer) {
+export function addFavoriteRequest(id) {
   return {
-    type: "ADD_FAVORITE",
+    type: "@favorite/ADD_REQUEST",
+    id
+  };
+}
+export function addFavoriteSuccess(beer) {
+  return {
+    type: "@favorite/ADD_SUCCESS",
     beer
   };
 }
