@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Link } from "react-router-dom";
 import api from "../../services/api";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
@@ -41,22 +42,24 @@ class Home extends Component {
             <strong>{beer.name}</strong>
             <span>First Brewd: {beer.first_brewed}</span>
             <span>{beer.tagline}</span>
-
-            {favoriteCheck[beer.id] === beer.id ? (
-              <button onClick={() => this.handleDisfavor(beer.id)}>
-                <div>
-                  <MdFavorite size={18} />
-                </div>
-                <span>Desfavoritar</span>
-              </button>
-            ) : (
-              <button onClick={() => this.handleFavor(beer.id)}>
-                <div>
-                  <MdFavoriteBorder size={18} />
-                </div>
-                <span>Favoritar</span>
-              </button>
-            )}
+            <div className="beerActions">
+              <Link to={`/beer/${beer.id}`}>Ver Detalhes</Link>
+              {favoriteCheck[beer.id] === beer.id ? (
+                <button onClick={() => this.handleDisfavor(beer.id)}>
+                  <div>
+                    <MdFavorite size={18} />
+                  </div>
+                  <span>Desfavoritar</span>
+                </button>
+              ) : (
+                <button onClick={() => this.handleFavor(beer.id)}>
+                  <div>
+                    <MdFavoriteBorder size={18} />
+                  </div>
+                  <span>Favoritar</span>
+                </button>
+              )}
+            </div>
           </li>
         ))}
       </BeerList>

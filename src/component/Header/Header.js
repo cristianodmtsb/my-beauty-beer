@@ -12,8 +12,8 @@ function HeaderComponent({ favorite }) {
       <Link to="/" className="logo">
         <img src={logo} alt="Monkey" />
       </Link>
-      <Favoritos to="/favoritos">
-        <MdFavoriteBorder /> {favorite} Favoritos
+      <Favoritos to="/linkes">
+        <MdFavoriteBorder /> {favorite} Linkes
       </Favoritos>
     </Container>
   );

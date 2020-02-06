@@ -21,4 +21,9 @@ export const Favoritos = styled(Link)`
   font-size: 20px;
   font-weight: bold;
   color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  svg {
+    margin-right: 10px;
+  }
 `;

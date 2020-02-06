@@ -13,7 +13,6 @@ export default function RouteWrapper({
 }) {
   const auth = isAuthenticated() === null ? false : true;
   const signed = auth ? auth : false;
-  console.log(auth, signed);
 
   if (isPrivate && !signed) {
     return <Redirect to="/" />;
